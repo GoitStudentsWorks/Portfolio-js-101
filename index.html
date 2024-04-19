@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Portfolio-js-101/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to my personal portfolio! I’m a Fullstack Developer with extensive experience in creating web applications and websites. Explore my skills and projects to learn more about what I do. Discover my achievements and opportunities for collaboration on your next project. Dive into my portfolio now!"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+    
+    <script type="module" crossorigin src="/Portfolio-js-101/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/Portfolio-js-101/assets/vendor-bf41a455.js">
+    <link rel="stylesheet" href="/Portfolio-js-101/assets/vendor-fb258d76.css">
+    <link rel="stylesheet" href="/Portfolio-js-101/assets/index-73b4541a.css">
+  </head>
+
+  <body>
+    <header class="header">
+  <div class="container header-container">
+    <div class="img-and-name">
+      <img class="header-img" srcset="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgICAgJCAkKCgkNDgwODRMREBARExwUFhQWFBwrGx8bGx8bKyYuJSMlLiZENS8vNUROQj5CTl9VVV93cXecnNEBCAgICAkICQoKCQ0ODA4NExEQEBETHBQWFBYUHCsbHxsbHxsrJi4lIyUuJkQ1Ly81RE5CPkJOX1VVX3dxd5yc0f/CABEIAKAAoAMBIgACEQEDEQH/xAAzAAABBAMBAAAAAAAAAAAAAAABAAIGBwMEBQgBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/aAAwDAQACEAMQAAAAv8LihsaGIKk1zQaCAAwR6Lk4hHIi7MEYk1wkQ52OxH0E1UXk9TzuXlxMQITDXAGRTpeeMtpNlic5x6OvsYMkVxudJIEK5+/559A9PLlSV5rv8DOGwkrlAgYDgiJU1fVb8vbrzzQ7WejuLLeGnX0amvBz1iXoGprq6+HMCtucJIOgkrQBAIJI1op2uBy93c3YfznFk6FacBXYvCjEXy2t6wqWk/Vwz9ObeQBQb4StIIISCDkwmzOXyehuN1dms4fGLIhWPTvQKbcUqRd+LTzq87M1w0yAIRupK0AghBIFz+hCAlrKotPm68kYkkXw6Y7EJpF52tCUYsnf5ABFSggjdSxUsqrXmCt1edYUz0rQkex1GKScHAi9trz/ACbh9KzI7From50zJj7fPakASSRs+cLJonTPVZsYHOLG9ip7sOYWTG1zMTXBNdLmhO2pt5vSfrfq+NLPTvsNenREEvyhN8GamXWlsYmqikB5U1EuY9oFmTEMouBgyNCe+k/F3qKatryl6vbU+EG+hqTajQc2aISBxa9pFrxNxuAyQ4CyQ20Fcexk9P8A/8QAPhAAAgEDAQUEBwQJBAMAAAAAAQIDAAQRBQYSITFREBNBcQcgIjAyQoFhcpGxFBUjJDNTYpKhQ1JUwZPC0v/aAAgBAQABPwCmZVUsxAAqbUDyiX6mpJ5pDl5GP17D6mKx60d1cxfw5nH1q21xxhZ1B/qFI6OoZGBB8R2MyqpYnAFXV09w+TwUcl9Q9tzdQ20e854+A8TU+vuh5RIPHJJNXWr3TxBhdlPupUGv6msmI75ZB0ePOas9qLaTC3Y7k5wG8DSukih0YMp5EHI9WyvZLSTIOUPxLSOrorqcgjIrUZSCsQ829YnFaztHZWSON9S4HI5NXOvvc3bPNKqRjG7HxPOtLaHUb4rMMlfBWYBh4HBxWoSRWKAKAEBwDul8edNMn6MJIQkrY4iMKCKmu0lBinhZM8ix/LFWOs3+mXDLBPvoDxRhk4rQ9fg1aNhgJOnxJn/I9XQ7kh2t25HitTPvyyN1Y+tr98tlYSMS28wwoXnV7PPc3BfPUgdBUNuZ5kUkgscHqQ1WNtfWF2kSJndB3WNCG5nmJY4HiGPPzHKhbRQFUSNS5PIZ3RV9ECO7mKcvZYVeqI5g5PJiAw8OqnrVjfTWOqCaFzvI+fNehq3mSeCKZPhdAw+vqWshiuIXHg49faqBpYI+Xjx6UkCpNIm43Pn4cKsNIjna1cEKUlBfIwcYqyt0uLoYHsRADPWrjT4/a8ATmrmOKCFhGBnyBwauJ5WcrwK7v1Jq6RCk+98y5PnUe+JYnXwxx8q0BxJo9kwHNPd63B3tkTj4TT6cJLknjjI4VbWbIrYAG9x+orTyYjuYAFTDeWrqz3lYgVcWZV34Yq6ti4Y7nHH41p+ky3E8KbgZGcDoatbWO0t4oIx7CLge7vRm0n+4ahtgBvEA8c1bxh8ADhS2savvE8aflmpJEBrUZYWYgEU8kDQsTjnWz3dfrCFfMjzAo+713Ujp9j3giEjO6xqpOAS1X36Wz9xBcdxPubxCqHUf3Umm7VxljDrkLEclltlwfqtPrO3dm5/S9GtZkX54nxn8Wqfb/U2lhtv1SIZXJH7R2x/ha1nWr+KciS8CuFyUSM4APHnv1GdUbTX1D+NCiF3x7DBRxJAOc1c68J1CwpLjmcnH5ZrZDTb+7naWG/7h41yC0Zcj8SKk1jbHTLm2hvrGzuY57gQxyRMyMxOTy4+71uwF/YPHjLIwkTzTjV3c3MmrMFmaGLKuSBxdfAVhPZ3eWKeJJEIYVrFhaxahpDd2ApeZPq0ZP/VXWiR3l0AsQAz7TnpWowImmDSrVUMt3iFF8Qp+Nj5Ctc0FLHVLTxjZWQn+rmBWyAjEkyqP9KpVW71m3A4pZIzv9kko3VH0XPvJrKJBMwhD7xyAeODUL/s1XfDMvxY4YpXyDV5Yx3se5KDjIIIOCCOIINawupWQWKDUCxc4XMSb/wCIAFWAi0zurpLO4ubl0AmnkYAJ14t+QraXVrO9keFFLjAORwwc1spYSyGZxf3KruYwNzx+0rmre1gtYu7hXC5JOSWLE8ySckn3WezVtQTTrCS6f4VaNT9gdwmfpmnRQMgc6HAZoyewavFRJu/lIAUcC3IVqut2QyoulcYIKggAUL23kMcccinHAZIJatkrcxWDuRwduFH3m3+ow2uz9xbl1725wipWx+38Bhj03WJAjqAsdw3Jh0eg6nkQQRkEciKOOta1HBOyxy4MWRvL/urVYtKsbFjFEAo5LgUsdrlZSoLOQBwAAzVpAlvawxJyVBR9xisUQFBLEAdTWvbX6PoluHMq3ErEqsUTKxzj5ugrXteuteumvJ90ZiVEReSgU68TWh7XavouI0k762/kyEkD7vStL20tb5DgsrDGVejOtxcK5lDLnkK1+4ie3dSg3FLD+0Zq0RZ5tORF4vIoA8zilXdRFzyUCj6088FtC81xKkcSDLO5wBWpelDRLVylrbzXP2/AtD0uWxQk6O//AJq1T0l6/eZFrLHap0jXLfi1Xes6nen97vZpvtdy1I28HRzwYc/tFQniymnpqjleJiyMRVjtNNB8ZI9mrnXXvdyASqqs3FmOAM1sfs5BbRR38l1DcyFcIYW30QU1H1ZZooIZJpXCxxqWZj4AVtbtRda5dsAzJaIf2UX/AG1NxP2VkofZ+opsEFl+o6VmkcoeB4GpODK44ZrfLDjRo9grTdZ1TSpN+xvJYT4hTwPmK0v0r38WE1KzSdfF4/YerX0k7LT4355oD0kj/wDnNWWu6LfkC01K3lY/KHG9+FY7fSTq5trCHTom9uf25PuLTg4JopgU6+J5Gvhb/BojBI7EOVxQypxRo+sCQQQcGtk/SHdWDpaaq7TWnISni8VQzQ3MMc8EiyROoZXU5BBrFbevcPtTqiTjBjk3EHRAOFSHh1GRRK8EfzVqYlSVYU9E8uwHFHiuelKawM5o0Bwz24ojs2J2xl0O5W1unLWErcR/KJ+cVaBLiSAowZHKkMOIKnjmvS7s6TLBrUSnckAhnPQ/I1SAoCjcwabDDFOT8LcxyNE9h8Oxa5HsbnR4J2CgM0RxFHmaPOvQ2+ozaFLLdpmCGUxWjmruxtr60ntLqIPDMhR0PiDW2eyF9s7ePHIGe0kbNvP1HRuj0wZGKuMGmw8Rz8S/l2+A7BTcs0tSDitPyHYKHOpOY7Ni9ir/AGov1VVaOxjb94uP/Ver1YWNpptlb2drEI4IECRoPADsvrOyv7SW0u7dJoJBho3GQa2m9Drujy6NOOohmb8nrUtl9pNKcre6PdxAc37ssh8mXIp1KsQQQeh9UcqXnUnymm7BSAs2ACTVjsrtJqjqtlo93Ln5u7Kp9WbArZv0LT76T6/cqi/8WA5J++9WNhZabaRWtpbxwwRjCRoMAdn/xAAlEQACAgEDAwQDAAAAAAAAAAABAgARAyAhMQQQEhMwQVEyYYH/2gAIAQIBAT8A0M6ryZ6y/RgYNwe4Oh2N0ISBLEU7xGsdhoy7OYKJFzIK4itMW5J1ZnXyAgUVyI4JIAgxFjsJiXxUj96uoxFiGX+wEERrBBsAQNXjUx/jrYFTRmTeri19GIPFQNFGVAKhUMKImXp25TcRML7XoUfOupXb49kiA17X/8QAJxEAAQMDAwMEAwAAAAAAAAAAAQACEQMgIQQSMRBBgRMyM2FRUrH/2gAIAQMBAT8AsaxzuAvQdHIRaW8jqRZTYI3FNBKgpwwqjdpxx0NlCCwfSdIkhUzu9xTmYVeAAO92npVPT3gYJMeEXOmIP9VOIJJTqzWDJVd0vB+rtHqQxppvE/r5RBB54Kpdxkk5Rp+6eTEeFX+Q3cZTHBwkKliYTi3bh2U9257jZIW5Ekpri0yCqGqYRD8H8qpqGZAzY89rR0lT0PKFgQ6goibe9v8A/9k= 2x" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgICAgJCAkKCgkNDgwODRMREBARExwUFhQWFBwrGx8bGx8bKyYuJSMlLiZENS8vNUROQj5CTl9VVV93cXecnNEBCAgICAkICQoKCQ0ODA4NExEQEBETHBQWFBYUHCsbHxsbHxsrJi4lIyUuJkQ1Ly81RE5CPkJOX1VVX3dxd5yc0f/CABEIAFAAUAMBIgACEQEDEQH/xAAyAAABBAMBAAAAAAAAAAAAAAAGAQIFBwAECAMBAAMBAQAAAAAAAAAAAAAAAAECAwQA/9oADAMBAAIQAxAAAAC/IJfAFjPQCVyqIqgwhoPNmmDx5mhUGbNY+yKjclZWaNxvDzOlGQ0CM5CFncb45urBvtxrcsFNxiU2Auadm2BRbXlvEbLVTTh2RUCp+iXpXYKvDdOq78Upcd18aGat0olTWwU58COx+XKzDm5gL8R3BuIvFLpr/qgH/8QAMhAAAgEEAAMFBwMFAQAAAAAAAQIDAAQFEQYSIRATMUFxByIyQlFSYRSSwhUgNFNicv/aAAgBAQABPwC5uVtl+sh8qluJpfic6+nlRo1dZC0teksnX6CpuJLKKRVMUhB8COWrW+tLxdwTK31HmPUdkF5cwHccrD8eIqwvkvFOxyuvitXEplmdz5np6dhrjDiaTFBLe2AMzj9tY24vby6WW4DSRCUc/Tm2TQ77vJXChYiNKD0K+lZSS6s5Y5UmIdG6OvuMB+dVwrnnytvLHP8A5EJ0x+4dlnOYLmKQeR0fQ9pri7FvPkY5VHUgVhsdFbGMNEAGILn6lfCr+0GmMUY2QetZK0mYNz7J69DXAePuIZbudukZQL/dlpof1GuUu8aDaj/revGjmEtVQ3OJvlG/jEYkUevITV/xvjEjd4ElkCEBtryaJ/8AVZLiWNOWWWAoZU5kVh8QPmKwGZ/TYuKW4sLhYpZfdkjUSKPLrrqKPaezK4w3LLLG5Qggvr5gm9DpSOjjqBojwrN46FO/mltueBnD6TW96C666+lZuGynsWkuORLheQQx9dBV94AHQ3vzrAxyzYqzVowsQfnPmTynY1Ro9h7MxeiwxN9dFwpjgcqT92ulYfPY7M2qXFpKu9e/H88bfQissx/TFhyll+EHw3WYF2boLJcwluUFgoOgD+TVjbC0sbeD7EAPYad0RGd2Cqo2WJ0ABU3HPCsMrRtlEJH2qzCr/wBq2JhJWzsZpz9zEItcQ8Z5PPFY5eWK18oU+6oLq6sZxPazvFIPBkOjVhxzNKkcWRO+U/EKxkh4lzJW3K92ApkckAgA+QpunTt9pHEEz3P9IgciKIAz6+dqdSPWmpW2Cu/yK3sdfGjUUssLrJFIyOp6MpKkehFY/wBofE9koQ3S3KDynXnrBe1GC5nSDLWyQcx0JoyeQeoNKyuqujBlYAgg7BBrjjGXWN4jycM+yGmaRHPzI/UVK9Mdns34Gm8KbyoDdEV7J87eXGQTAzc8sRBeJv8AXyVxtwba8TWY98Q3cQPdTfxas/wdxDgpWW8x0vdeUqDnj/cKPQ9gofAaJ2aHiKwvBvEuenVLHGzFCeszjkiHqxrgXgWy4Ss398TX04Hfz/wSv//EACARAAICAgICAwAAAAAAAAAAAAECAAMQERIhICIxQWH/2gAIAQIBAT8AjHQjWtv6iWcoDi7XCFPWUq2xv4y6B14mWdD9lGyTgLOpZWtg7ESoIOsb8DP/xAAgEQACAgICAgMAAAAAAAAAAAABAgADESEQEgQxICKB/9oACAEDAQE/AIqljiLSuN5llfX1z44JfQzqB/vPIZOuvfNVjVP2WVEdgR6M8vAVQOC24STKrXrOj+Sy5rDluMfAT//Z"
+        alt="My face" />
+      <h2 class="header-logo">jefferson*</h2>
+    </div>
+    <div class="menu-slider">
+      <button class="burger-tablet-and-desktop hidden" type="button">
+        Menu
+      </button>
+      <ul class="click-slider-menu hidden">
+        <li>
+          <a href="#about-me">About me</a>
+        </li>
+        <li>
+          <a href="#benefits-section-id">Benefits</a>
+        </li>
+        <li>
+          <a href="#projects-id">Projects</a>
+        </li>
+        <li>
+          <a href="#FAQ">FAQ</a>
+        </li>
+      </ul>
+    </div>
+    <span class="button-for-orders hidden">
+      <a href="#work-together">Order the project</a>
+    </span>
+    <button class="header-btn-burger" type="button">
+      <svg class="header-svg-burger" aria-label="menu">
+        <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-burger" width="28" height="28"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+    <main>
+      <section class="hero-section">
+  <div class="container">
+    <div class="gradient"></div>
+
+    <h1 class="hero-h1">
+      Hello.<br />
+      I’m Fullstack developer Lloyd Jefferson.
+    </h1>
+
+    <ul class="menu-link-portfolio list">
+      <li class="li-link-portfolio">
+        <a
+          class="item-link-portfolio"
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          >IG</a
+        >
+      </li>
+      <li class="li-link-portfolio">
+        <a
+          class="item-link-portfolio"
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          >FB</a
+        >
+      </li>
+      <li class="li-link-portfolio">
+        <a
+          class="item-link-portfolio"
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+          >YT</a
+        >
+      </li>
+      <li class="li-link-portfolio">
+        <a
+          class="item-link-portfolio"
+          href="https://github.com/vityayakymchuk/Portfolio"
+          target="_blank"
+          >GH</a
+        >
+      </li>
+      <li class="li-email-portfolio">
+        <a class="item-link-portfolio" href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="about-me-section" id="about-me">
+  <div class="about-me-overall">
+    <h2 class="about-me-hidden-header">About me</h2>
+    <div class="container about-me-overall-description">
+      <div class="about-me-description-box">
+        <p class="about-me-description-text">
+          I work with people all over the world to create impressive and
+          <span class="about-me-description-text-red">functional</span>
+          <span class="about-me-description-text-gray">websites</span> that
+          reflect each client's unique personality.
+        </p>
+      </div>
+    </div>
+    <div class="container about-me-overall-photo">
+      <div class="about-me-description-box">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="/Portfolio-js-101/assets/image_desc_x1-0d285f32.jpg 1x, /Portfolio-js-101/assets/image_desc_x2-f8de89c4.jpg 2x"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/Portfolio-js-101/assets/image_tablet_x1-b02abb79.jpg 1x, /Portfolio-js-101/assets/image_tablet_x2-1ceabbde.jpg 2x"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/Portfolio-js-101/assets/image_mob_x1-8e2caa93.jpg 1x, /Portfolio-js-101/assets/image_mob_x2-02c07e36.jpg 2x"
+          />
+          <img
+            class="about-me-description-image"
+            src="/Portfolio-js-101/assets/image_mob_x1-8e2caa93.jpg"
+            alt="Man with laptop"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div class="about-me-accordion-section container">
+    <ul class="about-me-accordion-list accordion-container">
+      <li class="about-me-accordion-list-item ac">
+        <h3 class="about-me-accordion-list-item-title ac-header">
+          About me
+          <button
+            class="accordion-list-item-button ac-trigger"
+            aria-label="Open/close information block"
+          >
+            <svg class="accordion-list-item-icon" width="20" height="20">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="accordion-list-item-text ac-panel">
+          I am Lloyd Jefferson, a talented programmer with extensive expertise
+          in software development. I have an understanding of different
+          programming languages ​and technologies, always ready to improve my
+          skills. I always follow the latest trends and look for unconventional,
+          creative solutions to problems. I have a high level of analytical
+          skills and am able to effectively solve even the most difficult tasks
+          encountered on the way.
+          <span class="indented"
+            >Able to work both independently and in a team. I can effectively
+            cooperate with colleagues, exchanging ideas and finding optimal
+            solutions. Professional maturity allows you to calmly cope with
+            challenges and stressful situations, while maintaining a high
+            quality of work.I am always looking for opportunities for
+            self-improvement. I actively study new technologies and practices to
+            stay abreast of the latest innovations. I have a strong
+            understanding of various programming languages, frameworks and
+            architectural concepts that allow me to create efficient and
+            scalable software.</span
+          >
+        </p>
+      </li>
+      <li class="about-me-accordion-list-item ac">
+        <h3 class="about-me-accordion-list-item-title ac-header">
+          ROLE
+          <button
+            class="accordion-list-item-button ac-trigger"
+            aria-label="Open/close information block"
+          >
+            <svg class="accordion-list-item-icon" width="20" height="20">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="accordion-list-item-text ac-panel">
+          Frontend development
+          <span class="indented-list"> HeadlessCMS,Wordpress </span>
+          <span class="indented-list indented-list-last"> Blender(enjoy) </span>
+        </p>
+      </li>
+      <li class="about-me-accordion-list-item ac">
+        <h3 class="about-me-accordion-list-item-title ac-header">
+          EDUCATION
+          <button
+            class="accordion-list-item-button ac-trigger"
+            aria-label="Open/close information block"
+          >
+            <svg class="accordion-list-item-icon" width="20" height="20">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="accordion-list-item-text ac-panel">
+          2018 - 2019 / Frontend Development Diploma, GoIT IT
+          <span class="intended-enter"> School, New York</span>
+          <span class="indented-list">
+            2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+            <span class="intended-enter">School, New York</span>
+          </span>
+          <span class="indented-list indented-list-last">
+            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+          </span>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="about-me-swiper-section container">
+    <div class="swiper about-me-swiper-container">
+      <ul class="swiper-wrapper about-me-swiper-wrapper-list">
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">Soft skills</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">HTML/CSS</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">JavaScript</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">React</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">Node.js</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">React Native</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">Soft skills</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">HTML/CSS</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">JavaScript</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">React</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">Node.js</button>
+        </li>
+        <li class="about-me-swiper-wrapper-item swiper-slide">
+          <button class="about-me-swiper-btn">React Native</button>
+        </li>
+      </ul>
+    </div>
+    <div class="about-me-swiper-btn-next swiper-button-next">
+      <svg class="about-me-arrow-next" width="28" height="28">
+        <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-right-arrow"></use>
+      </svg>
+    </div>
+  </div>
+</section>
+
+      <section class="benefits-section" id="benefits-section-id">
+  <div class="container double">
+    <h2 class="benefits-title">BENEFITS OF WORKING WITH ME</h2>
+    <div>
+      <div class="benefits-ul">
+        <div class="benefits-card-div">
+          <div class="benefits-svg">
+            <svg width="24" height="24">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-user"></use>
+            </svg>
+          </div>
+
+          <h3 class="benefits-li">Expertise</h3>
+          <p class="benefits-p">
+            As a highly experienced developer, I have deep knowledge of
+            programming and website development.
+          </p>
+        </div>
+
+        <div class="benefits-card-div">
+          <div class="benefits-svg">
+            <svg width="24" height="24">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-messages"></use>
+            </svg>
+          </div>
+
+          <h3 class="benefits-li">Communication</h3>
+          <p class="benefits-p">
+            Understanding your needs and wants is my priority and I am always
+            open to discussions and corrections.
+          </p>
+        </div>
+
+        <div class="benefits-card-div">
+          <div class="benefits-svg">
+            <svg width="24" height="24">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-tassel"></use>
+            </svg>
+          </div>
+
+          <h3 class="benefits-li">Art</h3>
+          <p class="benefits-p">
+            Thanks to my creative nature, I am ready to accept challenges and
+            help you bring your ideas to life.
+          </p>
+        </div>
+
+        <div class="benefits-card-div">
+          <div class="benefits-svg">
+            <svg width="24" height="24">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-time"></use>
+            </svg>
+          </div>
+
+          <h3 class="benefits-li">Urgent execution</h3>
+          <p class="benefits-p">
+            I understand how important time is to you. Ready to work quickly and
+            efficiently, without reducing the quality of work.
+          </p>
+        </div>
+      </div>
+
+      <a href="#work-together" class="benefits-a">Order the project</a>
+    </div>
+  </div>
+</section>
+
+      <section class="projects" id="projects-id">
+  <div class="container">
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-sections">
+      <div class="projects-top-section">
+        <ul class="technologies-list">
+          <li class="technologies-list-item">#react</li>
+          <li class="technologies-list-item">#js</li>
+          <li class="technologies-list-item">#node js</li>
+          <li class="technologies-list-item">#git</li>
+        </ul>
+        <p class="projects-text">
+          Programming Across Borders: Ideas, Technologies, Innovations
+        </p>
+        <a
+          class="projects-btn"
+          href="https://github.com/vityayakymchuk/Portfolio"
+          target="blank"
+          >See project</a
+        >
+      </div>
+      <div class="projects-bottom-section swiper projSwiper">
+        <ul class="projects-list swiper-wrapper">
+          <li class="projects-list-item swiper-slide">
+            <picture class="project-img">
+              <source
+                srcset="/Portfolio-js-101/assets/1-desktop1x-f360a989.jpg 1x, /Portfolio-js-101/assets/1-desktop2x-bc93bd38.jpg 2x"
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/Portfolio-js-101/assets/1-tablet1x-5639e243.jpg 1x, /Portfolio-js-101/assets/1-tablet2x-04c658d1.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/Portfolio-js-101/assets/1-mobile1x-f1fcaabf.jpg 1x, /Portfolio-js-101/assets/1-mobile2x-38d9a293.jpg 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="/Portfolio-js-101/assets/1-desktop1x-f360a989.jpg" alt="" />
+            </picture>
+          </li>
+          <li class="projects-list-item swiper-slide">
+            <picture>
+              <source
+                srcset="/Portfolio-js-101/assets/2-tablet1x-12e7cbf6.jpg 1x, /Portfolio-js-101/assets/2-tablet2x-21a2443c.jpg 2x"
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/Portfolio-js-101/assets/2-tablet1x-12e7cbf6.jpg 1x, /Portfolio-js-101/assets/2-tablet2x-21a2443c.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/Portfolio-js-101/assets/2-mobile1x-627fb9fa.jpg 1x, /Portfolio-js-101/assets/2-mobile2x-b62138b4.jpg 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="../img/Projects/2-desktop1x.jpg" alt="" />
+            </picture>
+          </li>
+          <li class="projects-list-item swiper-slide">
+            <picture>
+              <source
+                srcset="/Portfolio-js-101/assets/3-tablet1x-b8a483f5.jpg 1x, /Portfolio-js-101/assets/3-tablet2x-59579a2a.jpg 2x"
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/Portfolio-js-101/assets/3-tablet1x-b8a483f5.jpg 1x, /Portfolio-js-101/assets/3-tablet2x-59579a2a.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/Portfolio-js-101/assets/3-mobile1x-6be38e84.jpg 1x, /Portfolio-js-101/assets/3-mobile2x-a419ef0c.jpg 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="/Portfolio-js-101/assets/3-tablet1x-b8a483f5.jpg" alt="" />
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="arrows swiper-buttons">
+      <button
+        class="arrow-btn prev-btn-proj review-btn"
+        type="button"
+        aria-label="Next photo"
+      >
+        <svg class="arrow-icon">
+          <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-right-arrow"></use>
+        </svg>
+      </button>
+      <button
+        class="arrow-btn next-btn-proj review-btn"
+        type="button"
+        aria-label="Previos photo"
+      >
+        <svg class="arrow-icon">
+          <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-left-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="faq-questions-section" id="FAQ">
+  <div class="container faq-container">
+    <h2 class="faq-title">faq</h2>
+    <ul class="faq-accordion-container faq-list">
+      <li class="ac faq-list-item item-1">
+        <h3 class="ac-header faq-list-item-title">
+          <button type="button" class="ac-trigger faq-btn">
+            <span class="button-text"
+              >What programming languages ​​are most often used in your project?
+            </span>
+            <span class="arrow-icon-container">
+              <svg class="arrow-icon" width="20" height="20">
+                <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text faq-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="ac faq-list-item item-2">
+        <h3 class="ac-header faq-list-item-title">
+          <button type="button" class="ac-trigger faq-btn">
+            <span class="button-text"
+              >What are the deadlines for the project?</span
+            >
+            <span class="arrow-icon-container">
+              <svg class="arrow-icon" width="20" height="20">
+                <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text faq-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="ac faq-list-item item-3">
+        <h3 class="ac-header faq-list-item-title">
+          <button type="button" class="ac-trigger faq-btn">
+            <span class="button-text">What payment methods do you accept?</span>
+            <span class="arrow-icon-container">
+              <svg class="arrow-icon" width="20" height="20">
+                <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text faq-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+      <li class="ac faq-list-item item-4">
+        <h3 class="ac-header faq-list-item-title">
+          <button type="button" class="ac-trigger faq-btn">
+            <span class="button-text">How can I contact you?</span>
+            <span class="arrow-icon-container">
+              <svg class="arrow-icon" width="20" height="20">
+                <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text faq-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="ac faq-list-item item-5">
+        <h3 class="ac-header faq-list-item-title">
+          <button type="button" class="ac-trigger faq-btn">
+            <span class="button-text">Do you provide advice or support?</span>
+            <span class="arrow-icon-container">
+              <svg class="arrow-icon" width="20" height="20">
+                <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text faq-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="ac faq-list-item item-6">
+        <h3 class="ac-header faq-list-item-title">
+          <button type="button" class="ac-trigger faq-btn">
+            <span class="button-text"
+              >What does the process of developing a software product look like
+              from idea to implementation?</span
+            >
+            <span class="arrow-icon-container">
+              <svg class="arrow-icon" width="20" height="20">
+                <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-accordian-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text faq-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="js_enable_animation" id="covers">
+  <h2 class="cover_is_active visually-hidden">Cover</h2>
+  <div class="marquee">
+    <ul class="marquee__inner">
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg 1x, /Portfolio-js-101/assets/Rectangle_9-6cceb46d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg 1x, /Portfolio-js-101/assets/Rectangle_10-a46db3c8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg 1x, /Portfolio-js-101/assets/Rectangle_6-24e3d7e8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg 1x, /Portfolio-js-101/assets/Rectangle_7-035b30ae.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg 1x, /Portfolio-js-101/assets/Rectangle_5-33174f2d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg 1x, /Portfolio-js-101/assets/Rectangle_11-29f18e00.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg 1x, /Portfolio-js-101/assets/Rectangle_8-d1b61a9e.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_12-38fc4818.jpg 1x, /Portfolio-js-101/assets/Rectangle_12-d20734b7.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_12-38fc4818.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg 1x, /Portfolio-js-101/assets/Rectangle_4-b8ebdc2f.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg"
+          width="282"
+          height="162"
+          alt="by_forms"
+        />
+      </li>
+    </ul>
+    <ul class="marquee__inner">
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg 1x, /Portfolio-js-101/assets/Rectangle_5-33174f2d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_12-38fc4818.jpg 1x, /Portfolio-js-101/assets/Rectangle_12-d20734b7.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_12-38fc4818.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg 1x, /Portfolio-js-101/assets/Rectangle_4-b8ebdc2f.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg 1x, /Portfolio-js-101/assets/Rectangle_9-6cceb46d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg 1x, /Portfolio-js-101/assets/Rectangle_11-29f18e00.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg 1x, /Portfolio-js-101/assets/Rectangle_10-a46db3c8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg 1x, /Portfolio-js-101/assets/Rectangle_7-035b30ae.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_12-38fc4818.jpg 1x, /Portfolio-js-101/assets/Rectangle_12-d20734b7.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_12-38fc4818.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg 1x, /Portfolio-js-101/assets/Rectangle_6-24e3d7e8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg 1x, /Portfolio-js-101/assets/Rectangle_8-d1b61a9e.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+    </ul>
+    <ul class="marquee__inner">
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg 1x, /Portfolio-js-101/assets/Rectangle_10-a46db3c8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg 1x, /Portfolio-js-101/assets/Rectangle_8-d1b61a9e.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg 1x, /Portfolio-js-101/assets/Rectangle_7-035b30ae.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg 1x, /Portfolio-js-101/assets/Rectangle_5-33174f2d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg 1x, /Portfolio-js-101/assets/Rectangle_6-24e3d7e8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg 1x, /Portfolio-js-101/assets/Rectangle_4-b8ebdc2f.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg 1x, /Portfolio-js-101/assets/Rectangle_11-29f18e00.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="
+            ../img/Cover/img_1x/Rectangle_9.jpg 1x,
+            ../img/Cover/img_2x/Rectangle_9.jpg 2x
+          "
+          src="../img/Cover/Rectangle_9.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+    </ul>
+    <ul class="marquee__inner">
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg 1x, /Portfolio-js-101/assets/Rectangle_4-b8ebdc2f.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg 1x, /Portfolio-js-101/assets/Rectangle_9-6cceb46d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg 1x, /Portfolio-js-101/assets/Rectangle_8-d1b61a9e.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg 1x, /Portfolio-js-101/assets/Rectangle_7-035b30ae.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg 1x, /Portfolio-js-101/assets/Rectangle_5-33174f2d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg 1x, /Portfolio-js-101/assets/Rectangle_10-a46db3c8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg 1x, /Portfolio-js-101/assets/Rectangle_6-24e3d7e8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg 1x, /Portfolio-js-101/assets/Rectangle_11-29f18e00.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+    </ul>
+    <ul class="marquee__inner">
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg 1x, /Portfolio-js-101/assets/Rectangle_10-a46db3c8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_10-05a42d66.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg 1x, /Portfolio-js-101/assets/Rectangle_6-24e3d7e8.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_6-4576df46.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg 1x, /Portfolio-js-101/assets/Rectangle_11-29f18e00.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_11-061250e0.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+    </ul>
+    <ul class="marquee__inner">
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg 1x, /Portfolio-js-101/assets/Rectangle_4-b8ebdc2f.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_4-f2d7b54f.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg 1x, /Portfolio-js-101/assets/Rectangle_9-6cceb46d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_9-c098bc77.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg 1x, /Portfolio-js-101/assets/Rectangle_8-d1b61a9e.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_8-64a37946.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg 1x, /Portfolio-js-101/assets/Rectangle_7-035b30ae.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_7-e38dcd81.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+      <li class="marquee__line">
+        <img
+          class="is-active tutu"
+          srcset="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg 1x, /Portfolio-js-101/assets/Rectangle_5-33174f2d.jpg 2x"
+          src="/Portfolio-js-101/assets/Rectangle_5-14676b6a.jpg"
+          alt="by_forms"
+          width="282"
+          height="162"
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- <script type="module" src="./script.js"></script> -->
+
+      <section class="reviews">
+  <div class="container reviews-container">
+    <h2 class="reviews-title">Reviews</h2>
+    <!-- текст про те що не знайдено елементи якщо буде помилка від апі -->
+    <p class="hide-element not-found">Not found</p>
+    <p></p>
+    <div class="mySwiper swiper">
+      <ul class="swiper-wrapper reviews-ul"></ul>
+      <div class="swiper-buttons review-buttons">
+        <div class="button-prev">
+          <button aria-label="next-review" class="review-btn" type="button">
+            <svg class="review-icon" width="24px" height="24px">
+              <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-right-arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="button-next">
+          <button aria-label="next-review" class="review-btn" type="button">
+            <svg class="review-icon" width="24px" height="24px">
+              <use
+                class="review-arrow"
+                href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-left-arrow"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer" id="work-together">
+  <div class="container footer-container">
+    <div class="work-together">
+      <picture class="footer-img">
+        <source
+          srcset="/Portfolio-js-101/assets/footer-face@2x-d776dba8.jpg 2x, data:image/jpeg;base64,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 1x"
+          media="(min-width: 768px)"
+          width="70"
+          height="70"
+        />
+        <source
+          srcset="/Portfolio-js-101/assets/footer-face-mobile@2x-7ce38b54.jpg 2x, data:image/jpeg;base64,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 1x"
+          media="(max-width: 767px)"
+          width="44"
+          height="44"
+        />
+        <img
+          class="footer-img"
+          src="img/footer-face@1x.jpg"
+          alt="My face"
+          width="70"
+          height="70"
+        />
+      </picture>
+      <!-- <img
+        class="footer-img"
+        srcset="./img/header/header-face@2x.jpg 2x"
+        src="./img/header/header-face@1x.jpg"
+        alt="My face"
+      /> -->
+      <h2 class="footer-paragraph">
+        Let’s <span class="footer-paragraph coloured-text"> work</span> <br />
+        together
+      </h2>
+    </div>
+
+    <form class="footer-form" id="footer-form">
+      <div class="form-fields">
+        <label for="user-email">
+          <input
+            class="form-input"
+            type="email"
+            required
+            name="userEmail"
+            id="user-email"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            placeholder="clients@gmail.com"
+          />
+        </label>
+        <label for="user-comment">
+          <input
+            class="form-input"
+            type="text"
+            required
+            name="userComment"
+            id="user-comment"
+            placeholder="comments"
+          />
+        </label>
+        <!-- <input
+            class="form-input"
+            type="text"
+            required
+            name="userComment"
+            id="user-comment"
+            placeholder="comments"
+          /> -->
+      </div>
+      <button class="send-form-btn" type="submit" id="send-btn">Send</button>
+    </form>
+
+    <div class="footer-links">
+      <a class="link mail-l" href="mailto:lloydjefferson@gmail.com"
+        >lloydjefferson@gmail.com</a
+      >
+      <a class="link num-l" href="tel:+3801111111111">+380 11 1111 11 11</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal is-open class -->
+
+<div class="backdrop click" id="modal-open">
+  <!-- <div class="modal is-open"> -->
+  <div class="modal">
+    <button class="modal-close-btn click" type="button" id="modalBtn">
+      <svg class="modal-close-btn-icon" width="22" height="22">
+        <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-exit"></use>
+      </svg>
+    </button>
+    <div class="modal-text-box">
+      <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+      <p class="modal-text">
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+    </div>
+    <!-- <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+    <p class="modal-text">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p> -->
+  </div>
+</div>
+
+    <!-- ========================= Backdrop =========================-->
+<div class="mobile-menu-wrapper" data-menu>
+  <div class="gradient-modal"></div>
+
+  <div class="mobile-container-menu container">
+    <div class="mobile-top">
+      <button class="close-btn-backdrop" type="button" data-menu-close>
+        <svg
+          class="header-svg-burger"
+          width="14"
+          height="14"
+          aria-label="close button menu"
+        >
+          <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-exit"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-wrapper">
+      <ul class="header-menu-wrapper list">
+        <li class="header-menu-item">
+          <a class="header-menu-link" href="#about-me">About me</a>
+        </li>
+        <li class="header-menu-item">
+          <a class="header-menu-link" href="#benefits-section-id">Benefits</a>
+        </li>
+        <li class="header-menu-item">
+          <a class="header-menu-link" href="#projects-id">Projects</a>
+        </li>
+        <li class="header-menu-item">
+          <a class="header-menu-link" href="#faq">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <span class="btn-order-the-project"
+      ><a href="#work-together">Order the project</a></span
+    >
+  </div>
+</div>
+<!--========================= /Backdrop ========================= -->
+
+    <a id="button-scr-back">
+      <svg class="accordion-list-item-icon" width="20" height="20">
+        <use href="/Portfolio-js-101/assets/sprite-0f795396.svg#icon-left-arrow"></use>
+      </svg>
+    </a>
+
+    
+  </body>
+</html>
